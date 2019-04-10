@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <style>
+            body{
+                padding:0 0 0 0;
+                margin:0 0 0 0;
+            }
+        </style>
+    <script type="text/javascript" src="/vendor/js/fusioncharts.js"></script>
+	
+</head>
+<body>
+<div id="chartContainer"><small>Loading chart...</small></div>
+</body>
+<script>
+FusionCharts.setCurrentRenderer('javascript');
+FusionCharts.ready(function () {
+    var yearlyData = {
+        "lastyear": {
+            "chart": {
+                "caption": "Split of Revenue by Product Categories",
+                    "subCaption": "Last year",
+                    "numberPrefix": "$",
+                    "theme": "fint",
+                    "captionFontSize": "13",
+                    "subcaptionFontSize": "12",
+                    "subcaptionFontBold": "0"
+            },
+                "data": [{
+                "label": "Food",
+                    "value": "28504"
+            }, {
+                "label": "Apparels",
+                    "value": "14633"
+            }, {
+                "label": "Electronics",
+                    "value": "10507"
+            }, {
+                "label": "Household",
+                    "value": "4910"
+            }]
+        },
+            "thisyear": {
+            "chart": {
+                "caption": "Split of Revenue by Product Categories",
+                    "subCaption": "This year",
+                    "numberPrefix": "$",
+                    "theme": "fint",
+                    "captionFontSize": "13",
+                    "subcaptionFontSize": "12",
+                    "subcaptionFontBold": "0"
+            },
+                "data": [{
+                "label": "Food",
+                    "value": "5000"
+            }, {
+                "label": "Apparels",
+                    "value": "14633"
+            }, {
+                "label": "Electronics",
+                    "value": "1000"
+            }, {
+                "label": "Household",
+                    "value": "20000"
+            }]
+        }
+    };
+    var revenueChart = new FusionCharts({
+        type: 'doughnut2d',
+        renderAt: 'chartContainer',
+        width: '500',
+        height: '300',
+        dataFormat: 'json',
+        dataSource: yearlyData.lastyear
+    }).render();});
+</script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <script type="text/javascript" src="fusioncharts-xt-ol/js/fusioncharts.js"></script>
+		<script type="text/javascript" src="fusioncharts-xt-ol/js/fusioncharts.charts.js"></script>
+		<script type="text/javascript" src="fusioncharts/FusionCharts.jqueryplugin.js"></script>
+ 
+</head>
+<body>
+<div id="chartContainer"></div>
+</body>
+<script>
+FusionCharts.ready(function () {
+    var dashboardChart = new FusionCharts('ZoomLine',
+			'pcrChart',
+			'800', 
+			'400', 
+			'1', 
+			{autoInstallRedirect : "1" }
+			);
+			dashboardChart.setJSONData(
+			{
+	"chart": {
+		"showvalues": "0",
+		"xaxisname": "Pace Days",
+		"yaxisname": "Rooms",		
+		"chartRightMargin": 52,
+		"paletteThemeColor": "#5599BB",
+		"theme": "fusion",
+		"showBorder": "1",
+		"rotateLabels":"1",
+		"numDivLines":"8",
+		"divLineAlpha":"1",
+		"palette":"3",
+		"dataseparator":"|",
+		"compactdatamode": "1"
+	},
+	"vTrendlines": [
+		{
+			"line": [
+				{
+					"displayValue": "System Today",
+					"color": "#009966",
+					"dashed": "1",
+					"showOnTop": "1",
+					"startValue": "1"
+				}
+			]
+		}
+	],
+	"dataset": [
+		{
+			"data": "6262|6262|6262|6282|6305|6340|6427|6419|6386|6340|6384",
+			"seriesname": "Rooms Sold (Analysis Period)",
+			"englishSeriesName": "Rooms Sold (Analysis Period)",
+			"color": "#FF5800",
+			"dashed": "0",
+			"anchorBgColor": "#FF5800"
+		},
+		{
+			"data": "6702|6742|6740|6703|6648|6629|6671|6637|6618|6611|6646",
+			"seriesname": "Rooms Sold (Comparison Period)",
+			"englishSeriesName": "Rooms Sold (Comparison Period)",
+			"color": "#C42100",
+			"dashed": "0",
+			"anchorBgColor": "#C42100"
+		},
+		{
+			"data": "6522|6522|6522|6529|6532|6558|6654|6649|6661|6614|6653",
+			"seriesname": "Occupancy Forecast (Analysis Period)",
+			"englishSeriesName": "Occupancy Forecast (Analysis Period)",
+			"color": "#FFCC00",
+			"dashed": "0",
+			"anchorBgColor": "#FFCC00"
+		},
+		{
+			"data": "0|0|0|0|0|0|0|0|0|0|0",
+			"seriesname": "Budgeted Rooms Sold (Analysis Period)",
+			"englishSeriesName": "Budgeted Rooms Sold (Analysis Period)",
+			"color": "#972B91",
+			"dashed": "0",
+			"anchorBgColor": "#972B91"
+		},
+		{
+			"data": "6401|6401|6401|6401|6401|6401|6401|6401|6401|6401|6401",
+			"seriesname": "Budgeted Rooms Sold (Comparison Period)",
+			"englishSeriesName": "Budgeted Rooms Sold (Comparison Period)",
+			"color": "#B961C9",
+			"dashed": "0",
+			"anchorBgColor": "#B961C9"
+		}
+	],
+	"categories": [
+		{
+			"category": "0|1|2|3|4|5|6|7|8|9|10"
+		}
+	]
+}
+
+);	
+dashboardChart.render('chartContainer');});
+</script>
+</html>
