@@ -30,3 +30,27 @@ The project focuses on hands‑on learning, helping you understand how PHP integ
 
 The repository currently includes:
 
+php/
+├── WebPages/ # Folder containing practice PHP files & web pages
+├── index.php (if present) # Entry PHP file (optional)
+├── assets/ (if present) # Supporting images/CSS/JS
+└── README.md # This documentation
+
+
+> *Files may include combinations of PHP scripts, HTML templates, and frontend assets for building web pages.*
+
+---
+
+## 💻 How to Use
+
+### ✅ Prerequisites
+
+To run and explore the code in this repository, make sure you have:
+
+- **PHP (v7.4+)** installed on your system  
+- A **web server** like Apache, Nginx, or the built‑in PHP server
+
+You can check your PHP version using:
+
+```bash
+php -v
